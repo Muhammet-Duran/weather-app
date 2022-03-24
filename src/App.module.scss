@@ -1,0 +1,21 @@
+@import "./styles/variables.scss";
+
+.app {
+  background-image: url(./assets/sunset.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding-top: 120px;
+  // display: flex;
+  //   align-items: center;
+  // justify-content: center;
+  &__weather_area {
+    width: 1140px;
+    height: 400px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: 48px auto 0;
+    border-radius: $borderRadius;
+    box-shadow: $boxShadow;
+  }
+}

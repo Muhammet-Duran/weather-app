@@ -1,0 +1,29 @@
+@import "./../../styles/variables.scss";
+
+.search__area {
+  display: block;
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+  &__input {
+    width: 100%;
+    display: block;
+    outline: none;
+    font-family: inherit;
+    height: $inputHeight;
+    border-radius: $borderRadius;
+    border: 2px solid silver;
+    padding-left: 28px;
+    padding-right: 20px;
+    font-size: $fontSize;
+    color: $textwhite;
+    background-color: #001d3d;
+    font-weight: 400;
+    &::placeholder {
+      color: #a9a9a9;
+    }
+    &:focus {
+      border-color: $textwhite;
+    }
+  }
+}
