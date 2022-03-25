@@ -7,15 +7,17 @@
   background-position: center;
   background-size: cover;
   padding-top: 120px;
+  
   // display: flex;
   //   align-items: center;
   // justify-content: center;
   &__weather_area {
     width: 1140px;
-    height: 400px;
-    background-color: rgba(255, 255, 255, 0.5);
+    
+    background-color:#00004699;
     margin: 48px auto 0;
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
+    padding: 60px 20px 20px 36px;
   }
 }

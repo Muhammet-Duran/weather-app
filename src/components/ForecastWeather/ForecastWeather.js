@@ -18,6 +18,58 @@ const ForecastWeather = () => {
             10 °C
           </span>
         </li>
+        <li className={styles.forecast_area__days_list__day}>
+          <span className={styles.forecast_area__days_list__day__name}>
+            Friday
+          </span>
+          <img
+            className={styles.forecast_area__days_list__day__name}
+            alt="images"
+          />
+          <span className={styles.forecast_area__days_list__day__name}>
+            {" "}
+            10 °C
+          </span>
+        </li>
+        <li className={styles.forecast_area__days_list__day}>
+          <span className={styles.forecast_area__days_list__day__name}>
+            Friday
+          </span>
+          <img
+            className={styles.forecast_area__days_list__day__name}
+            alt="images"
+          />
+          <span className={styles.forecast_area__days_list__day__name}>
+            {" "}
+            10 °C
+          </span>
+        </li>
+        <li className={styles.forecast_area__days_list__day}>
+          <span className={styles.forecast_area__days_list__day__name}>
+            Friday
+          </span>
+          <img
+            className={styles.forecast_area__days_list__day__name}
+            alt="images"
+          />
+          <span className={styles.forecast_area__days_list__day__name}>
+            {" "}
+            10 °C
+          </span>
+        </li>
+        <li className={styles.forecast_area__days_list__day}>
+          <span className={styles.forecast_area__days_list__day__name}>
+            Friday
+          </span>
+          <img
+            className={styles.forecast_area__days_list__day__name}
+            alt="images"
+          />
+          <span className={styles.forecast_area__days_list__day__name}>
+            {" "}
+            10 °C
+          </span>
+        </li>
       </ul>
     </div>
   );

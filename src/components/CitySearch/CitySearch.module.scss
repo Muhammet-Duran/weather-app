@@ -5,6 +5,7 @@
   max-width: 600px;
   width: 100%;
   margin: 0 auto;
+  position: relative;
   &__input {
     width: 100%;
     display: block;
@@ -12,12 +13,12 @@
     font-family: inherit;
     height: $inputHeight;
     border-radius: $borderRadius;
-    border: 2px solid silver;
+    border: 2px solid #904e95;
     padding-left: 28px;
     padding-right: 20px;
     font-size: $fontSize;
     color: $textwhite;
-    background-color: #001d3d;
+    background-color:#000046;
     font-weight: 400;
     &::placeholder {
       color: #a9a9a9;
@@ -25,5 +26,23 @@
     &:focus {
       border-color: $textwhite;
     }
+  }
+  &__btn{
+    font-family: inherit;
+    border: none;
+    outline: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color:#904e95;
+    font-weight: 400;
+    padding: 10px 16px;
+    border-radius: $borderRadius;
+    color: $textwhite;
+    font-size: 13px;
+    letter-spacing: 1px;
+    
+
   }
 }
