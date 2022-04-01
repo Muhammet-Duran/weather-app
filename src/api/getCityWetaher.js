@@ -1,12 +1,6 @@
-import fetch from "./fetch.js"
+import fetch from "./fetch.js";
 
-export const getCityWeather = async (city = "Samsun") => {
-  const {data} = await fetch(`weather?q=${city}`)
+export const getForeCastWeather = async (city = "Samsun") => {
+  const data = await fetch(`forecast?q=${city}`);
   return data;
-}
-export const getForeCastWeather = async(city= "Samsun") =>{
-  const data = await fetch(`forecast?q=${city}`)
-  return data;
-}
-
-
+};

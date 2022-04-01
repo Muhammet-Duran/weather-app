@@ -7,17 +7,25 @@
   background-position: center;
   background-size: cover;
   padding-top: 120px;
-  
-  // display: flex;
-  //   align-items: center;
-  // justify-content: center;
+  &__undefined_title{
+    color:$textwhite;
+    text-align: center;
+    margin-top: 28px;
+    font-size: 22px;
+    letter-spacing:.8px;
+    font-weight: 200;
+    text-shadow: 4px 4px 4px #333;
+
+  }
   &__weather_area {
     width: 1140px;
-    
     background-color:#00004699;
     margin: 48px auto 0;
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
-    padding: 60px 20px 20px 36px;
+    padding: 60px 20px 54px 36px;
+    img{
+      margin: 0 auto;
+    }
   }
 }

@@ -1,30 +1,10 @@
 @import "./../../styles/variables.scss";
 
-.forecast_area{
-    margin-top: 30px;
-    &__days_list{
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        &__day{
-            width: 150px;
-            height: 150px;
-            background-color: teal;
-            border-radius: $borderRadius;
-            box-shadow: $boxShadow;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            &__name{
-                font-size: 24px;
-                color:$textwhite;
-                margin-top: 10px;
-            }
-        }
-        &__day + &__day{
-            margin-left: 30px;
-        }
-
-    }
+.forecast_area {
+  margin-top: 50px;
+  &__days_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
