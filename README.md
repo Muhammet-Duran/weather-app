@@ -1,4 +1,7 @@
 # Movie App - [Demo](https://weather-app-muhammetduran.vercel.app/)
+<br/>
+
+![weatherapp](https://user-images.githubusercontent.com/76096635/161399037-c830784b-e850-4416-95cb-dd71944b2eeb.png)
 
 <br>
 
