@@ -10,10 +10,9 @@ import { getForeCastWeather } from "./api/getCityWetaher";
 
 function App() {
   const [location, setLocation] = useState("Istanbul");
-  const [filterForecast, setFilterForecast] = useState();
+  const [filterForecast, setFilterForecast] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  console.log(filterForecast);
 
   const getWeatherApi = async () => {
     setIsLoading(true);
@@ -22,7 +21,8 @@ function App() {
       setFilterForecast(updateDailyWeather(dataForecast?.data));
       console.log(dataForecast);
     } catch (error) {
-      setError(error?.message);
+      setError("🤔 Oops! Something went wrong");
+      console.log("hata");
     } finally {
       setIsLoading(false);
     }
@@ -45,10 +45,15 @@ function App() {
   return (
     <div className={styles.app}>
       <CitySearch onFormSubmit={searchOnSubmit} handleChange={handleChange} />
-      {filterForecast ? (
+
+      {error ? (
+        <h1 className={styles.app__undefined_title}>{error}</h1>
+      ) : (
         <div className={styles.app__weather_area}>
           {isLoading ? (
-            <img width="60px" src={Loading} alt="Loadergif" />
+            <div className={styles.app__weather_area__gif_area}>
+              <img width="60px" src={Loading} alt="Loadergif" />
+            </div>
           ) : (
             <Fragment>
               <CurrentWeather
@@ -59,10 +64,6 @@ function App() {
             </Fragment>
           )}
         </div>
-      ) : (
-        <h1 className={styles.app__undefined_title}>
-          Let's find out how the weather is today... 🙂
-        </h1>
       )}
     </div>
   );
