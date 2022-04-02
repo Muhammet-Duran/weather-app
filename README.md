@@ -16,7 +16,7 @@
 To install and work on `https://weather-app-muhammetduran.vercel.app/`
 
 ```bash
-git clone https://github.com/Muhammet-Duran/Movie-App
+git clone https://github.com/Muhammet-Duran/weather-app
 cd movie-app
 npm install or yarn install
 ```
