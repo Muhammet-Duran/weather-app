@@ -1,9 +1,11 @@
 import { Fragment, useEffect, useState } from "react";
 
 import styles from "./App.module.scss";
-import CitySearch from "./components/CitySearch/CitySearch";
-import CurrentWeather from "./components/CurrentWeather/CurrentWeather";
-import Forecast from "./components/ForecastWeather/ForecastWeather";
+import {
+  ForecastWeather,
+  CurrentWeather,
+  CitySearch,
+} from "./components/index";
 import Loading from "./assets/Loading.gif";
 import { updateDailyWeather } from "./helpers/getUpdateDailyWeather";
 import { getForeCastWeather } from "./api/getCityWetaher";
@@ -60,7 +62,7 @@ function App() {
                 weatherData={filterForecast[0]}
                 location={location}
               />
-              <Forecast forecastWeather={filterForecast?.slice(1)} />
+              <ForecastWeather forecastWeather={filterForecast?.slice(1)} />
             </Fragment>
           )}
         </div>

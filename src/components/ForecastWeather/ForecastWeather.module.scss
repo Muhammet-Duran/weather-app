@@ -2,9 +2,19 @@
 
 .forecast_area {
   margin-top: 50px;
+  
+  @include breakpoint('md-only'){
+    margin-top: 24px;
+  }
+
   &__days_list {
     display: flex;
     align-items: center;
     justify-content: center;
+    @include breakpoint('md-only'){
+      flex-wrap: wrap;
+    gap: 12px;
+    }
+    
   }
 }

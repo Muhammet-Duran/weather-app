@@ -2,10 +2,13 @@
 
 .search__area {
   display: block;
-  max-width: 600px;
+  max-width: 640px;
   width: 100%;
   margin: 0 auto;
   position: relative;
+  padding-left: 20px;
+  padding-right: 20px;
+
   &__input {
     width: 100%;
     display: block;
@@ -32,7 +35,7 @@
     border: none;
     outline: none;
     position: absolute;
-    right: 10px;
+    right: 30px;
     top: 50%;
     transform: translateY(-50%);
     background-color:#904e95;

@@ -12,6 +12,9 @@
   padding-bottom:20px;
   width: calc(25% - 15px);
   border:2px solid #904e95;
+  @include breakpoint(sm-only){
+    width: calc(50% - 10px);
+  }
 
   &__name {
     font-size: 24px;
@@ -26,7 +29,7 @@
 .day + .day {
   margin-left: 30px;
   @include breakpoint(md-only) {
-    margin-left: 20px;
+    margin-left: 0px;
 
   }
 }

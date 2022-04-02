@@ -1,20 +1,10 @@
 import React from "react";
 import styles from "./DailyForecast.module.scss";
 
-const DailyForecast = ({ daysWeather }) => {
-  //return find the day of the week
-  let getDay = (date) => {
-    let weekDay = new Array(7);
-    weekDay[0] = "Sunday";
-    weekDay[1] = "Monday";
-    weekDay[2] = "Tuesday";
-    weekDay[3] = "Wednesday";
-    weekDay[4] = "Thursday";
-    weekDay[5] = "Friday";
-    weekDay[6] = "Saturday";
+import { getDay } from "./../../../helpers/getDay";
+import { convertKelvinToCelsius } from "./../../../helpers/convertKelvinToCelsius";
 
-    return weekDay[new Date(date).getDay()];
-  };
+const DailyForecast = ({ daysWeather }) => {
   const kelvinTemp = daysWeather?.temp;
   return (
     <li className={styles.day}>
@@ -31,7 +21,7 @@ const DailyForecast = ({ daysWeather }) => {
         height="100"
       />
       <span className={styles.day__name}>
-        {Number.parseFloat(kelvinTemp - 273.15).toFixed(0)} &deg;C
+        {convertKelvinToCelsius(kelvinTemp)} &deg;C
       </span>
     </li>
   );

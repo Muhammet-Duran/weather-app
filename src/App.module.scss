@@ -7,6 +7,11 @@
   background-position: center;
   background-size: cover;
   padding-top: 120px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  @include breakpoint('md-only'){
+    padding-top: 60px;
+  }
   &__undefined_title{
     color:$textwhite;
     text-align: center;
@@ -24,9 +29,15 @@
     border-radius: $borderRadius;
     box-shadow: $boxShadow;
     padding: 60px 20px 54px 36px;
+    @include breakpoint(md-only){
+      margin-left: 20px;
+      margin-right: 20px;
+      padding:30px 20px 20px 20px;
+    }
     &__gif_area{
-      max-width: 200px;
-      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }

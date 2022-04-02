@@ -1,6 +1,3 @@
-// import { default as ForecastWeather} from './../components/ForecastWeather/ForecastWeather';
-// import { default as CurrentWearher} from './../components/CurrentWearher/CurrentWearher';
-// import { default as CitySearch} from './../components/CitySearch/CitySearch'
-
-
-
+export { default as ForecastWeather } from "./../components/ForecastWeather/ForecastWeather";
+export { default as CurrentWeather } from "./../components/CurrentWeather/CurrentWeather";
+export { default as CitySearch } from "./../components/CitySearch/CitySearch";

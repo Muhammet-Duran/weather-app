@@ -3,20 +3,26 @@
 .weather_area{
     display: flex;
     align-items: center;
-    // justify-content:space-between;
-    &__icons{
-        // width: 100px;
-        // height: 100px;
-        // background-color:orange;
-    }
+    @include breakpoint(md-only) {
+        justify-content: center;
+  
+      }
     &__info_content{
         margin-left: 40px;
+        @include breakpoint(md-only) {
+            margin-left:10px;
+      
+          }
         &__text{
             font-size: 28px;
             font-weight: 600;
             color:$textwhite;
             letter-spacing:1.6px;
             line-height: 42px;
+            @include breakpoint(md-only) {
+                font-size: 20px;
+                letter-spacing: .8px;
+            }
         }
         &__city{
             font-size: 42px;
@@ -25,6 +31,13 @@
             letter-spacing: 2px;
             margin-top: 10px;
             margin-bottom: 10px;
+            @include breakpoint(md-only) {
+                font-size: 30px;
+                margin-top: 4px;
+                margin-bottom: 4px;
+                letter-spacing: 1px;
+          
+              }
         }
     }
 }

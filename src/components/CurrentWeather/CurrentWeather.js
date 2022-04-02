@@ -1,8 +1,9 @@
 import styles from "./CurrentWeather.module.scss";
 
+import { convertKelvinToCelsius } from "./../../helpers/convertKelvinToCelsius";
+
 const CurrentWeather = ({ weatherData }) => {
   const cityName = weatherData?.city?.split(" ")[0];
-  // const description = weatherData?.weather[0]?.description;
   const kelvinTemp = weatherData?.temp;
 
   return (
@@ -23,7 +24,7 @@ const CurrentWeather = ({ weatherData }) => {
         <p className={styles.weather_area__info_content__text}>Today</p>
         <p className={styles.weather_area__info_content__city}>{cityName}</p>
         <p className={styles.weather_area__info_content__text}>
-          {Number.parseFloat(kelvinTemp - 273.15).toFixed(0)} &deg;C
+          {convertKelvinToCelsius(kelvinTemp)} &deg;C
         </p>
         <p className={styles.weather_area__info_content__text}>
           {weatherData?.weather_desc}
