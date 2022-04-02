@@ -4,7 +4,6 @@
 $lato: "Lato", sans-serif;
 
 // $headerHeight: 96px;
-
 // $headerColor: #181818cc;
 // $bodyColor: #262626;
 $inputHeight: 50px;
@@ -15,9 +14,7 @@ $backgroundColor: #ffffff33;
 $fontSize: 18px;
 // $color: #ffc11d;
 // $greyColor: darkslategrey;
-
 // $borderRadius: 4px;
-
 // breakpoints
 @mixin breakpoint($point) {
   @if $point == lg {

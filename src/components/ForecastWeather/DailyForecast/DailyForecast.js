@@ -15,7 +15,6 @@ const DailyForecast = ({ daysWeather }) => {
 
     return weekDay[new Date(date).getDay()];
   };
-  // console.log(daysWeather);
   const kelvinTemp = daysWeather?.temp;
   return (
     <li className={styles.day}>

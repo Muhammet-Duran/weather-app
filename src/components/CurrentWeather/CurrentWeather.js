@@ -1,6 +1,6 @@
 import styles from "./CurrentWeather.module.scss";
 
-const CurrentWeather = ({ weatherData, location }) => {
+const CurrentWeather = ({ weatherData }) => {
   const cityName = weatherData?.city?.split(" ")[0];
   // const description = weatherData?.weather[0]?.description;
   const kelvinTemp = weatherData?.temp;
