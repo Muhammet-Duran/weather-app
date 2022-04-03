@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react";
-
+import { motion } from "framer-motion";
 import styles from "./App.module.scss";
 import {
   ForecastWeather,
@@ -18,13 +18,15 @@ function App() {
 
   const getWeatherApi = async () => {
     setIsLoading(true);
+    setError(null);
+
     try {
       const dataForecast = await getForeCastWeather(location);
       setFilterForecast(updateDailyWeather(dataForecast?.data));
       console.log(dataForecast);
+      setError(null);
     } catch (error) {
       setError("🤔 Oops! Something went wrong");
-      console.log("hata");
     } finally {
       setIsLoading(false);
     }
@@ -33,6 +35,7 @@ function App() {
   const searchOnSubmit = (e) => {
     e.preventDefault();
     getWeatherApi();
+    console.log(location);
   };
 
   useEffect(() => {
@@ -43,6 +46,14 @@ function App() {
   const handleChange = (e) => {
     setLocation(e.target.value);
   };
+  const variants = {
+    hidden: { opacity: 0, y: "100vh" },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 1 },
+    },
+  };
 
   return (
     <div className={styles.app}>
@@ -51,7 +62,12 @@ function App() {
       {error ? (
         <h1 className={styles.app__undefined_title}>{error}</h1>
       ) : (
-        <div className={styles.app__weather_area}>
+        <motion.div
+          className={styles.app__weather_area}
+          variants={variants}
+          initial="hidden"
+          animate="visible"
+        >
           {isLoading ? (
             <div className={styles.app__weather_area__gif_area}>
               <img width="60px" src={Loading} alt="Loadergif" />
@@ -65,7 +81,7 @@ function App() {
               <ForecastWeather forecastWeather={filterForecast?.slice(1)} />
             </Fragment>
           )}
-        </div>
+        </motion.div>
       )}
     </div>
   );
